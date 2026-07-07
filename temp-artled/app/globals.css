@@ -39,7 +39,7 @@ h1 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 2rem;
+  padding: 100px 2rem 2rem;
 }
 
 .hero-content {
@@ -73,7 +73,7 @@ h1 {
 }
 
 .button {
-  padding: 16px 36px;
+  padding: 18px 44px;
   border: 1px solid #1b1b1b;
   background: transparent;
   cursor: pointer;
@@ -84,4 +84,126 @@ h1 {
 .button:hover {
   background: #1b1b1b;
   color: white;
+}
+
+/* ---------------- NAVBAR ---------------- */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(244, 236, 227, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+}
+
+.logo {
+  font-family: Georgia, serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.2rem;
+  text-decoration: none;
+  color: #1b1b1b;
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  gap: 42px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #444;
+  font-size:.9rem;
+  letter-spacing:.04em;
+  transition: 0.25s;
+}
+
+nav a:hover {
+  color: black;
+}
+
+/* ---------------- FEATURED ---------------- */
+
+.featured {
+  padding: 180px 0;
+  background: white;
+}
+
+.section-label {
+  letter-spacing: 0.35rem;
+  color: #8a6a4a;
+  font-size: 0.8rem;
+  margin-bottom: 25px;
+}
+
+.featured h2 {
+  font-size: 4rem;
+  margin-bottom: 25px;
+}
+
+.featured-tag {
+  font-size: 1.4rem;
+  font-style: italic;
+  color: #444;
+  margin-bottom: 35px;
+}
+
+.featured-description {
+  max-width: 700px;
+  line-height: 2;
+  color: #555;
+  margin-bottom: 45px;
+}
+/* ---------- ACTIVE NAVIGATION ---------- */
+
+.nav-link{
+
+    text-decoration:none;
+
+    color:#555;
+
+    transition:.3s;
+
+    position:relative;
+
+}
+
+.nav-link:hover{
+
+    color:black;
+
+}
+
+.nav-link.active{
+
+    color:black;
+
+}
+
+.nav-link.active::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:100%;
+
+    height:1px;
+
+    background:black;
+
 }
