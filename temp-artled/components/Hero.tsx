@@ -1,28 +1,35 @@
+import Navbar from "./Navbar";
 import Button from "./Button";
 import Container from "./Container";
 
 export default function Hero() {
   return (
-    <section className="hero">
-      <Container>
-        <div className="hero-content">
-          <p className="eyebrow">ART BY ZONOTHA ZWANE</p>
+    <>
+      <Navbar />
 
-          <h1>
-            ARTLED
-            <br />
-            WORKS
-          </h1>
+      <section className="hero">
+        <Container>
+          <div className="hero-content">
+            <p className="eyebrow">ART BY ZONOTHA ZWANE</p>
 
-          <p className="tagline">
-            Portraits that invite you
-            <br />
-            to look beyond the visible.
-          </p>
+            <h1>
+              ARTLED
+              <br />
+              WORKS
+            </h1>
 
-          <Button>Explore Collections</Button>
-        </div>
-      </Container>
-    </section>
+            <p className="tagline">
+              Portraits that invite you
+              <br />
+              to look beyond the visible.
+            </p>
+
+            <Button href="/exhibitions">
+             Enter Gallery
+            </Button>
+          </div>
+        </Container>
+      </section>
+    </>
   );
 }
