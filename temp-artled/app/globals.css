@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+:root {
+  --background: #F4ECE3;
+  --foreground: #1B1B1B;
+  --accent: #8A6A4A;
+  --muted: #6F6F6F;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #F4ECE3;
+  color: #1B1B1B;
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+}
+
+h1 {
+  color: #1B1B1B;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-content {
+  max-width: 850px;
+}
+
+.eyebrow {
+  letter-spacing: 0.35rem;
+  font-size: 0.85rem;
+  color: #786351;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: clamp(4rem, 10vw, 8rem);
+  line-height: 0.9;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #4A4A4A;
+  margin-bottom: 3rem;
+}
+
+.cta {
+  padding: 16px 36px;
+  border: 1px solid var(--foreground);
+  background: transparent;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+.cta:hover {
+  background: var(--foreground);
+  color: white;
+}
