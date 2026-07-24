@@ -1,35 +1,47 @@
+import Image from "next/image";
 import Navbar from "./Navbar";
 import Button from "./Button";
-import Container from "./Container";
 
 export default function Hero() {
   return (
     <>
       <Navbar />
 
-      <section className="hero">
-        <Container>
-          <div className="hero-content">
-            <p className="eyebrow">ART BY ZONOTHA ZWANE</p>
+<section className="hero">
+  <div className="hero-layout">
 
-            <h1>
-              ARTLED
-              <br />
-              WORKS
-            </h1>
+    <div className="hero-content">
+        <p className="eyebrow">ART BY ZONOTHA ZWANE</p>
 
-            <p className="tagline">
-              Portraits that invite you
-              <br />
-              to look beyond the visible.
-            </p>
+           <h1>
+            ARTLED
+            <br />
+            WORKS
+           </h1>
 
-            <Button href="/exhibitions">
-             Enter Gallery
-            </Button>
+           <p className="tagline">
+            Portraits that invite you
+            <br />
+            to look beyond the visible.
+           </p>
+
+           <Button href="/exhibitions">
+             Enter Gallery <span>→</span>
+           </Button>
           </div>
-        </Container>
-      </section>
+
+        <div className="hero-artwork">
+         <Image
+         src="/artworks/the-awakening.png"
+         alt="The Awakening"
+         fill
+         priority
+         className="hero-image"
+        />
+    </div>
+
+  </div>
+</section>
     </>
   );
 }

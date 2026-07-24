@@ -1,87 +1,51 @@
 import Description from "@/components/Description";
 import { artworks } from "@/data/artworks";
 import ArtworkHero from "@/components/EntranceWall.tsx";
-import MotionSection from "@/components/MotionSection";
 import Reflection from "@/components/Reflection";
 import WallLabel from "@/components/WallLabel";
 import NextRoom from "@/components/NextRoom";
 
 export default function VeilOfStrengthMonochrome() {
-    const artwork = artworks.veilOfStrengthMonochrome;
+  const artwork = artworks.veilOfStrengthMonochrome;
+
   return (
-    <main>
-
-      <ArtworkHero
-        image={artwork.image}
-        title={artwork.title}
-        medium={artwork.medium}
-        year={artwork.year}   
-    />
-
-<WallLabel
-  title={artwork.title}
-  medium={artwork.medium}
-  year={artwork.year}
-  dimensions={artwork.dimensions}
-  tag={artwork.tag}
+        <main
+          style={{
+            minHeight: "100vh",
+            background: "#F8F5F2",
+          }}
+        >
+        <ArtworkHero
+          image={artwork.image}
+          title={artwork.title}
+          medium={artwork.medium}
+          year={artwork.year}
+          orientation="landscape"
 />
+    
+        <WallLabel
+          title={artwork.title}
+          medium={artwork.medium}
+          year={artwork.year}
+          dimensions={artwork.dimensions}
+          tag={artwork.tag}
+        />
 
-<Description>{artwork.description}</Description>
-
-      <MotionSection>
-
-        <section className="transition-room">
-
-          <div className="transition-content">
-
-            <p className="transition-label">
-              Reflection
-            </p>
-
-            <h2>
-              The Quiet Within
-            </h2>
-
-            <p className="transition-text">
-
-              When colour disappears,
-              presence remains.
-
-              The veil no longer speaks through
-              movement, but through silence.
-
-              What remains is not absence—
-              but essence.
-
-            </p>
-
-          </div>
-
-        </section>
-
-      </MotionSection>
+      <Description>{artwork.description}</Description>
 
       <Reflection title="Reflection">
-
         <p>
-
-          The monochrome version of
-          <em> Veil of Strength </em>
-          invites the viewer beyond appearance.
-
-          Without colour, the work asks us
-          to encounter emotion in its
-          purest form.
-
+          As a companion to <em>Veil of Strength</em>, this monochrome portrait
+          shifts the conversation from colour to presence.
         </p>
 
+        <p>
+          Without the symbolism of blue, the gaze carries the work alone,
+          inviting a quieter encounter with identity, resilience, and spirit.
+        </p>
       </Reflection>
 
-    <NextRoom
-       href="/exhibitions/moya/thula-moya"
-    />
-
+      <NextRoom href="/exhibitions/moya/thula-moya" />
     </main>
   );
 }
-

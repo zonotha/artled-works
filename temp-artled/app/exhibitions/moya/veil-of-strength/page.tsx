@@ -3,7 +3,6 @@ import NextRoom from "@/components/NextRoom";
 import { artworks } from "@/data/artworks";
 import WallLabel from "@/components/WallLabel";
 import ArtworkHero from "@/components/EntranceWall.tsx";
-import MotionSection from "@/components/MotionSection";
 import Reflection from "@/components/Reflection";
 export default function VeilOfStrength() {
     const artwork = artworks.veilOfStrength;
@@ -11,18 +10,16 @@ export default function VeilOfStrength() {
     <main
       style={{
         minHeight: "100vh",
-        display: "grid",
-        placeItems: "center",
         background: "#F8F5F2",
       }}
     >
-<ArtworkHero
-  image={artwork.image}
-  title={artwork.title}
-  medium={artwork.medium}
-  year={artwork.year}
-
-/>
+    <ArtworkHero
+      image={artwork.image}
+      title={artwork.title}
+      medium={artwork.medium}
+      year={artwork.year}
+      orientation="landscape"
+    />
 
     <WallLabel
       title={artwork.title}
@@ -33,41 +30,6 @@ export default function VeilOfStrength() {
     />
 
     <Description>{artwork.description}</Description>
-
-<MotionSection>
-
- <section className="transition-room">
-
-    <div className="transition-content">
-
-        <p className="transition-label">
-            Exhibition Statement
-        </p>
-
-        <h2>
-            MOYA
-        </h2>
-
-        <p className="transition-text">
-
-            MOYA is an exploration of spirit,
-            memory and becoming.
-
-            It invites the viewer into a quiet
-            conversation where portraiture
-            becomes more than representation—
-            it becomes presence.
-
-            Each work carries a fragment of
-            an inward journey.
-
-        </p>
-
-    </div>
-
- </section>
-
-</MotionSection>
 
 <Reflection title="Reflection">
 
@@ -88,4 +50,3 @@ export default function VeilOfStrength() {
     </main>
   );
 }
-

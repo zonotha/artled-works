@@ -14,7 +14,7 @@ export default function Button({
     return (
       <Link
         href={href}
-        className="button"
+        className="button hero-cta"
       >
         {children}
       </Link>

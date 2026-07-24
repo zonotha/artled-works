@@ -18,29 +18,31 @@ export default function ExhibitionIntro({
 }: Props) {
   return (
     <section className="exhibition-intro">
-
       <Container>
+        <div className="exhibition-intro-content">
 
-        <p className="section-label">
-          EXHIBITION
-        </p>
+          <p className="section-label">
+            EXHIBITION
+          </p>
 
-        <h1>{title}</h1>
+          <h1>{title}</h1>
 
-        <p className="intro-subtitle">
-          {subtitle}
-        </p>
+          <p className="intro-subtitle">
+            {subtitle}
+          </p>
 
-        <p className="intro-statement">
-          {statement}
-        </p>
+          <div className="intro-divider" />
 
-        <Button href={buttonHref}>
-          {buttonText}
-        </Button>
+          <p className="intro-statement">
+            {statement}
+          </p>
 
+          <Button href={buttonHref}>
+            {buttonText}
+          </Button>
+
+        </div>
       </Container>
-
     </section>
   );
 }

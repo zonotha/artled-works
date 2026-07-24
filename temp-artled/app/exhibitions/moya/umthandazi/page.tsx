@@ -1,7 +1,6 @@
-﻿import Description from "@/components/Description";
+import Description from "@/components/Description";
 import { artworks } from "@/data/artworks";
 import ArtworkHero from "@/components/EntranceWall.tsx";
-import MotionSection from "@/components/MotionSection";
 import Reflection from "@/components/Reflection";
 import WallLabel from "@/components/WallLabel";
 import NextRoom from "@/components/NextRoom";
@@ -11,48 +10,27 @@ export default function Umthandazi() {
 
   return (
     <main>
-      <ArtworkHero
-        image={artwork.image}
-        title={artwork.title}
-        medium={artwork.medium}
-        year={artwork.year}
-      />
-
-      <WallLabel
-        title={artwork.title}
-        medium={artwork.medium}
-        year={artwork.year}
-        dimensions={artwork.dimensions}
-        tag={artwork.tag}
-      />
-
+      <ArtworkHero image={artwork.image} title={artwork.title} medium={artwork.medium} year={artwork.year} />
+      <WallLabel title={artwork.title} medium={artwork.medium} year={artwork.year} dimensions={artwork.dimensions} tag={artwork.tag} />
       <Description>{artwork.description}</Description>
-
-      <MotionSection>
-        <section className="transition-room">
-          <div className="transition-content">
-            <p className="transition-label">Reflection</p>
-
-            <h2>The Quiet Within</h2>
-
-            <p className="transition-text">
-              This portrait moves between stillness and prayer.
-              It traces breath as a gesture of resilience,
-              inviting a gentle, sustained attention.
-            </p>
-          </div>
-        </section>
-      </MotionSection>
 
       <Reflection title="Reflection">
         <p>
-          Some prayers are never heard aloud.
-          
-          They are carried in the quiet devotion of those who came before us.
+          Some prayers are never spoken aloud.
+        </p>
 
-          Umthandazi honours the unseen labour of faith—where love, sacrifice and prayer become an inheritance passed gently from one generation to the next.
-          
-          Some spirits shape us long before we understand their gifts.
+        <p>
+          They are carried in the quiet devotion of those
+          who came before us, woven into everyday acts of
+          faith, love and sacrifice.
+        </p>
+
+        <p>
+          Umthandazi honours the spiritual pillars of our
+          lives—the mothers, grandmothers and elders whose
+          prayers became an unseen inheritance, shaping us
+          long before we understood the strength they were
+          giving us.
         </p>
       </Reflection>
 

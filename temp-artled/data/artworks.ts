@@ -46,12 +46,11 @@ export const artworks = {
 
   whereTheFlameLives: {
     title: "Where the Flame Lives",
-    collection: "MOYA",
     year: "2025",
     medium: "Digital Painting",
     dimensions: "A2–A1 (Canvas Print)",
 
-    tag: "In stillness, spirit reveals itself.",
+    tag: "Holding hope where light endures.",
 
     description:
     "In cupped hands, a single flame burns—not for the world, but from within. Where the Flame Lives captures the quiet pulse of spirit: a soul held gently, protected fiercely. It speaks of faith, remembrance, and the enduring power of light carried in love—the strength required to hold on to hope, and the tenderness needed to nurture it.",

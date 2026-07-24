@@ -1,7 +1,6 @@
 import Description from "@/components/Description";
 import { artworks } from "@/data/artworks";
 import ArtworkHero from "@/components/EntranceWall.tsx";
-import MotionSection from "@/components/MotionSection";
 import Reflection from "@/components/Reflection";
 import WallLabel from "@/components/WallLabel";
 import NextRoom from "@/components/NextRoom";
@@ -11,52 +10,24 @@ export default function ThulaMoya() {
 
   return (
     <main>
-      <ArtworkHero
-        image={artwork.image}
-        title={artwork.title}
-        medium={artwork.medium}
-        year={artwork.year}
-      />
-
-      <WallLabel
-        title={artwork.title}
-        medium={artwork.medium}
-        year={artwork.year}
-        dimensions={artwork.dimensions}
-        tag={artwork.tag}
-      />
-
+      <ArtworkHero image={artwork.image} title={artwork.title} medium={artwork.medium} year={artwork.year} />
+      <WallLabel title={artwork.title} medium={artwork.medium} year={artwork.year} dimensions={artwork.dimensions} tag={artwork.tag} />
       <Description>{artwork.description}</Description>
-
-      <MotionSection>
-        <section className="transition-room">
-          <div className="transition-content">
-            <p className="transition-label">Reflection</p>
-
-            <h2>The Quiet Within</h2>
-
-            <p className="transition-text">
-              Eyes closed, spirit open.
-              This portrait honours the stillness at the heart of identity and belonging.
-            </p>
-          </div>
-        </section>
-      </MotionSection>
 
       <Reflection title="Reflection">
         <p>
-            Eyes closed, spirit open.
+          Eyes closed, spirit open.
+        </p>
 
-        <br /><br />
+        <p>
+          In stillness we often mistake silence for emptiness,
+          yet it is within quietness that spirit speaks most
+          clearly.
 
-           In stillness we often mistake silence for emptiness,
-           yet it is within quietness that spirit speaks most clearly.
-
-           Thula Moya invites us to rest—not in resignation,
-           but in peace. It honours the strength found in
-           remaining rooted in who we are, where heritage,
-           memory and spirit breathe together.
-
+          Thula Moya invites us to rest—not in resignation,
+          but in peace. It honours the strength found in
+          remaining rooted in who we are, where heritage,
+          memory and spirit breathe together.
         </p>
       </Reflection>
 

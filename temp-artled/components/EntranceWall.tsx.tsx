@@ -1,14 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
 
 interface EntranceWallProps {
   image: string;
   title: string;
   medium: string;
   year: string;
+  orientation?: "portrait" | "landscape";
 }
 
 export default function EntranceWall({
@@ -16,63 +15,41 @@ export default function EntranceWall({
   title,
   medium,
   year,
+  orientation = "portrait",
 }: EntranceWallProps) {
-
-  const [enteredRoom, setEnteredRoom] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!enteredRoom && window.scrollY > 120) {
-        setEnteredRoom(true);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [enteredRoom]);
-
   return (
-    <section className="artwork-hero">
-      <Image
-        src={image}
-        alt={title}
-        fill
-        priority
-        className="artwork-image"
-      />
+    <section
+      style={{
+        background: "#F8F5F2",
+        padding: "120px 0 40px",
+        display: "flex",
+        justifyContent: "center",
+      }}
+    >
+      <div
+        style={{
+          position: "relative",
 
-      <div className="artwork-overlay">
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={
-            enteredRoom
-              ? {
-                  opacity: 0,
-                  y: 35,
-                }
-              : {
-                  opacity: 1,
-                  y: 0,
-                }
-          }
-          transition={{
-            duration: 0.9,
-            delay: enteredRoom ? 0 : 0.8,
-            ease: "easeOut",
+          width:
+            orientation === "landscape"
+              ? "min(95vw, 1200px)"
+              : "min(90vw, 700px)",
+
+          aspectRatio:
+            orientation === "landscape"
+              ? "16 / 9"
+              : "3 / 4",
+        }}
+      >
+        <Image
+          src={image}
+          alt={title}
+          fill
+          priority
+          style={{
+            objectFit: "contain",
           }}
-          className="hero-text"
-        >
-          <h1 className="hero-title">
-            {title}
-          </h1>
-
-          <p className="hero-details">
-            {medium} · {year}
-          </p>
-        </motion.div>
+        />
       </div>
     </section>
   );
