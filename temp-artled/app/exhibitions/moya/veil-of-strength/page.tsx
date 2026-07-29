@@ -10,16 +10,16 @@ export default function VeilOfStrength() {
     <main
       style={{
         minHeight: "100vh",
-        background: "#F8F5F2",
+        background: artwork.backgrounds.hero,
       }}
     >
+
     <ArtworkHero
       image={artwork.image}
       title={artwork.title}
-      medium={artwork.medium}
-      year={artwork.year}
+      background={artwork.backgrounds.hero}
       orientation="landscape"
-    />
+   />
 
     <WallLabel
       title={artwork.title}
@@ -27,11 +27,16 @@ export default function VeilOfStrength() {
       year={artwork.year}
       dimensions={artwork.dimensions}
       tag={artwork.tag}
+      background={artwork.backgrounds.label}
     />
-
-    <Description>{artwork.description}</Description>
-
-<Reflection title="Reflection">
+      <Description background={artwork.backgrounds.description}>
+        {artwork.description}
+      </Description>
+      
+      <Reflection
+        title="Reflection"
+        background={artwork.backgrounds.reflection}
+      >
 
   Veil of Strength is the opening work of MOYA.
   It introduces the quiet tension between
@@ -41,12 +46,10 @@ export default function VeilOfStrength() {
 
 </Reflection>
 
-    <NextRoom
-
-      href="/exhibitions/moya/veil-of-strength-monochrome"
-
-    />
-
+      <NextRoom
+        href="/exhibitions/moya/veil-of-strength-monochrome"
+        background={artwork.backgrounds.nextRoom}
+      />
     </main>
   );
 }

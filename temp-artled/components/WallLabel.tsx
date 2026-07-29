@@ -8,6 +8,7 @@ interface WallLabelProps {
   year: string;
   dimensions: string;
   tag: string;
+  background: string;
 }
 
 export default function WallLabel({
@@ -16,11 +17,13 @@ export default function WallLabel({
   year,
   dimensions,
   tag,
-}: WallLabelProps) {
+  background,
+}: WallLabelProps)  {
   return (
     <motion.div
       className="wall-label"
-      initial={{ opacity: 0, y: 30 }}
+    style={{ background }}
+      initial={{ opacity: 0, y: 18 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.5 }}
       transition={{ duration: 0.8 }}

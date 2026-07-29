@@ -9,12 +9,36 @@ export default function ThulaMoya() {
   const artwork = artworks.thulaMoya;
 
   return (
-    <main>
-      <ArtworkHero image={artwork.image} title={artwork.title} medium={artwork.medium} year={artwork.year} />
-      <WallLabel title={artwork.title} medium={artwork.medium} year={artwork.year} dimensions={artwork.dimensions} tag={artwork.tag} />
-      <Description>{artwork.description}</Description>
+    <main
+      style={{
+        minHeight: "100vh",
+        background: artwork.backgrounds.hero,
+      }}
+    >
+      
+      <ArtworkHero
+        image={artwork.image}
+        title={artwork.title}
+        background={artwork.backgrounds.hero}
+      />
 
-      <Reflection title="Reflection">
+      <WallLabel
+        title={artwork.title}
+        medium={artwork.medium}
+        year={artwork.year}
+        dimensions={artwork.dimensions}
+        tag={artwork.tag}
+        background={artwork.backgrounds.label}
+      />      
+
+      <Description background={artwork.backgrounds.description}>
+        {artwork.description}
+      </Description>
+      
+      <Reflection
+        title="Reflection"
+        background={artwork.backgrounds.reflection}
+      >
         <p>
           Eyes closed, spirit open.
         </p>
@@ -31,7 +55,10 @@ export default function ThulaMoya() {
         </p>
       </Reflection>
 
-      <NextRoom href="/exhibitions/moya/where-the-flame-lives" />
+      <NextRoom
+        href="/exhibitions/moya/where-the-flame-lives"
+        background={artwork.backgrounds.nextRoom}
+      />
     </main>
   );
 }

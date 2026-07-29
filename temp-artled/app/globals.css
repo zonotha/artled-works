@@ -1,15 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #111111;
 
-  --gold: #C7A46A;
+  --gallery-wall: #F8F5F2;
 
-  --gold-soft: rgba(199,164,106,.75);
+  --gallery-description: #B88A4A;
 
-  --text: #D8C9B2;
+  --gallery-reflection: #C79A57;
 
-  --line: rgba(199,164,106,.45);
 }
 
 * {
@@ -657,70 +655,83 @@ Gallery Room
 Artwork Label
 ------------------------ */
 
-.wall-label{
-    max-width:700px;
-    margin:0 auto;
-    text-align:center;
+.wall-label {
+    max-width: 720px;
 
-    padding:110px 0 90px;
+    margin: -20px auto 0;
 
-    background:#F8F5F2;
+    padding: 52px 60px;
+
+    border-radius: 8px;
+
+    background: rgba(255,255,255,0.82);
+
+    backdrop-filter: blur(8px);
+
+    border: 1px solid rgba(0,0,0,.08);
+
+    box-shadow:
+        0 18px 50px rgba(0,0,0,.08);
+
+    text-align: center;
+
+    position: relative;
+
+    z-index: 5;
 }
 
-.wall-label h2{
+.wall-label h2 {
 
-    font-family:var(--font-cormorant);
+    font-family: var(--font-cormorant);
 
-    font-size:3rem;
+    font-size: clamp(2.4rem,4vw,3.5rem);
 
-    font-weight:400;
+    font-weight: 500;
 
-    line-height:1.1;
+    letter-spacing: .03em;
 
-    margin-bottom:18px;
+    margin-bottom: 18px;
 
-    color:#1B1B1B;
-
+    color: #1f1f1f;
 }
 
 .wall-details{
 
-    font-size:.95rem;
+    color:#707070;
 
-    color:#6B6B6B;
+    letter-spacing:.12em;
 
-    letter-spacing:.04em;
+    text-transform:uppercase;
 
-    line-height:1.8;
+    font-size:.82rem;
 
+    margin-bottom:28px;
 }
 
 .wall-divider{
 
-    width:260px;
+    width:180px;
 
     height:1px;
 
-    margin:42px auto;
+    background:#c9bda8;
 
-    background:#CDBFAF;
-
+    margin:0 auto 28px;
 }
 
 .wall-tag{
 
-    max-width:650px;
-
-    font-size:clamp(1.6rem,2vw,2rem);
-
-    line-height:1.75;
-
-    font-family:var(--font-heading);
-
     font-style:italic;
 
-    color:#3F342A;
+    font-size:1.15rem;
 
+    color:#6d5d4b;
+
+    line-height:1.8;
+
+    max-width:500px;
+
+    margin:auto;
 }
 
 /* ------------------------
@@ -728,45 +739,33 @@ Reflection
 -------------------------*/
 
 .reflection{
-
-    background:#F2EAE1;
-
-    padding:130px 0;
-
+    padding:120px 0;
 }
 
 .reflection-content{
-
-    max-width:700px;
-
+    max-width:620px;
     margin:auto;
-
-    text-align:center;
-
 }
 
 .reflection-label{
-
+    font-size:.8rem;
+    letter-spacing:.2em;
     text-transform:uppercase;
-
-    letter-spacing:.45em;
-
-    font-size:.68rem;
-
-    margin-bottom:28px;
-
-    color:#A58C73;
-
+    color:#8B7D70;
+    margin-bottom:32px;
 }
 
 .reflection-text{
 
-    font-size:1.25rem;
+    font-size:1.18rem;
 
     line-height:2;
 
-    color:#4C4C4C;
+    color:#4A433D;
+}
 
+.reflection-text p{
+    margin-bottom:2rem;
 }
 
 /* ------------------------
@@ -903,7 +902,7 @@ Next Room
 
 .description {
     padding: 100px 0;
-    background: #F5EEE7;
+    background:var(--gallery-description);
 }
 
 /* ==========================================

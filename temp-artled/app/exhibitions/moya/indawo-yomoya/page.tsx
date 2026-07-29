@@ -9,12 +9,36 @@ export default function IndawoYomoya() {
   const artwork = artworks.indawoYomoya;
 
   return (
-    <main>
-      <ArtworkHero image={artwork.image} title={artwork.title} medium={artwork.medium} year={artwork.year} />
-      <WallLabel title={artwork.title} medium={artwork.medium} year={artwork.year} dimensions={artwork.dimensions} tag={artwork.tag} />
-      <Description>{artwork.description}</Description>
+    <main
+      style={{
+        minHeight: "100vh",
+        background: artwork.backgrounds.hero,
+      }}
+    >
 
-      <Reflection title="Reflection">
+       <ArtworkHero
+         image={artwork.image}
+         title={artwork.title}
+         background={artwork.backgrounds.hero}
+       />
+
+       <WallLabel
+         title={artwork.title}
+         medium={artwork.medium}
+         year={artwork.year}
+         dimensions={artwork.dimensions}
+         tag={artwork.tag}
+         background={artwork.backgrounds.label}
+       />      
+ 
+       <Description background={artwork.backgrounds.description}>
+         {artwork.description}
+       </Description>
+       
+       <Reflection
+         title="Reflection"
+         background={artwork.backgrounds.reflection}
+       >
         <p>
           Every journey eventually returns
           to where it first began.
@@ -33,7 +57,11 @@ export default function IndawoYomoya() {
         </p>
       </Reflection>
 
-      <NextRoom href="/exhibitions" />
+      <NextRoom
+        href="/exhibitions"
+        background={artwork.backgrounds.nextRoom}
+        label="Return to Exhibitions"
+      />
     </main>
   );
 }

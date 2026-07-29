@@ -5,23 +5,23 @@ import Image from "next/image";
 interface EntranceWallProps {
   image: string;
   title: string;
-  medium: string;
-  year: string;
+  background: string;
   orientation?: "portrait" | "landscape";
+  scale?: number;
 }
 
 export default function EntranceWall({
   image,
   title,
-  medium,
-  year,
+  background,
   orientation = "portrait",
+  scale = 1,
 }: EntranceWallProps) {
   return (
     <section
       style={{
-        background: "#F8F5F2",
-        padding: "120px 0 40px",
+        background,
+        padding: "120px 0 120px",
         display: "flex",
         justifyContent: "center",
       }}

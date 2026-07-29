@@ -9,12 +9,36 @@ export default function Umthandazi() {
   const artwork = artworks.umthandazi;
 
   return (
-    <main>
-      <ArtworkHero image={artwork.image} title={artwork.title} medium={artwork.medium} year={artwork.year} />
-      <WallLabel title={artwork.title} medium={artwork.medium} year={artwork.year} dimensions={artwork.dimensions} tag={artwork.tag} />
-      <Description>{artwork.description}</Description>
+    <main
+      style={{
+        minHeight: "100vh",
+        background: artwork.backgrounds.hero,
+      }}
+    >
+      
+      <ArtworkHero
+        image={artwork.image}
+        title={artwork.title}
+        background={artwork.backgrounds.hero}
+      />
+      
+      <WallLabel
+        title={artwork.title}
+        medium={artwork.medium}
+        year={artwork.year}
+        dimensions={artwork.dimensions}
+        tag={artwork.tag}
+        background={artwork.backgrounds.label}
+      />      
 
-      <Reflection title="Reflection">
+      <Description background={artwork.backgrounds.description}>
+        {artwork.description}
+      </Description>
+      
+      <Reflection
+        title="Reflection"
+        background={artwork.backgrounds.reflection}
+      >
         <p>
           Some prayers are never spoken aloud.
         </p>
@@ -34,7 +58,10 @@ export default function Umthandazi() {
         </p>
       </Reflection>
 
-      <NextRoom href="/exhibitions/moya/indawo-yomoya" />
+      <NextRoom
+        href="/exhibitions/moya/indawo-yomoya"
+        background={artwork.backgrounds.nextRoom}
+      />
     </main>
   );
 }

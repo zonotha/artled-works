@@ -13,14 +13,24 @@ export default function WhereTheFlameLives() {
       <ArtworkHero
         image={artwork.image}
         title={artwork.title}
-        medium={artwork.medium}
-        year={artwork.year}
-        scale={1.08}
+        background={artwork.background}
       />
-      <WallLabel title={artwork.title} medium={artwork.medium} year={artwork.year} dimensions={artwork.dimensions} tag={artwork.tag} />
-      <Description>{artwork.description}</Description>
-
-      <Reflection title="Reflection">
+      <WallLabel
+          title={artwork.title}
+          medium={artwork.medium}
+          year={artwork.year}
+          dimensions={artwork.dimensions}
+          tag={artwork.tag}
+          background={artwork.background}
+        />
+        <Description background={artwork.background}>
+        {artwork.description}
+        </Description>
+        
+      <Reflection
+        title="Reflection"
+        background={artwork.background}
+      >
         <p>
           Every spirit carries a light.
         </p>
@@ -38,7 +48,10 @@ export default function WhereTheFlameLives() {
         </p>
       </Reflection>
 
-      <NextRoom href="/exhibitions/moya/umthandazi" />
+      <NextRoom
+        href="/exhibitions/moya/umthandazi"
+        background={artwork.background}
+      />
     </main>
   );
 }

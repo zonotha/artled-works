@@ -12,16 +12,16 @@ export default function VeilOfStrengthMonochrome() {
         <main
           style={{
             minHeight: "100vh",
-            background: "#F8F5F2",
+            background: artwork.backgrounds.hero,
           }}
         >
-        <ArtworkHero
+
+       <ArtworkHero
           image={artwork.image}
           title={artwork.title}
-          medium={artwork.medium}
-          year={artwork.year}
+          background={artwork.backgrounds.hero}
           orientation="landscape"
-/>
+        />
     
         <WallLabel
           title={artwork.title}
@@ -29,11 +29,17 @@ export default function VeilOfStrengthMonochrome() {
           year={artwork.year}
           dimensions={artwork.dimensions}
           tag={artwork.tag}
+          background={artwork.backgrounds.label}
         />
 
-      <Description>{artwork.description}</Description>
+      <Description background={artwork.backgrounds.description}>
+        {artwork.description}
+      </Description>
 
-      <Reflection title="Reflection">
+      <Reflection
+        title="Reflection"
+        background={artwork.backgrounds.reflection}
+      >
         <p>
           As a companion to <em>Veil of Strength</em>, this monochrome portrait
           shifts the conversation from colour to presence.
@@ -45,7 +51,10 @@ export default function VeilOfStrengthMonochrome() {
         </p>
       </Reflection>
 
-      <NextRoom href="/exhibitions/moya/thula-moya" />
+      <NextRoom
+        href="/exhibitions/moya/thula-moya"
+        background={artwork.backgrounds.nextRoom}
+      />
     </main>
   );
 }
