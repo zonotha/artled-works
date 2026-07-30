@@ -16,10 +16,10 @@ export const artworks = {
     backgrounds: {
       hero: "var(--gallery-wall)",
       label: "var(--gallery-wall)",
-      description: "var(--gallery-wall)",
-      reflection: "var(--gallery-wall)",
+      description: "var(--gallery-description)",
+      reflection: "var(--gallery-reflection)",
       nextRoom: "var(--gallery-wall)",
-},
+    }
 },
 
   veilOfStrengthMonochrome: {
@@ -39,10 +39,10 @@ export const artworks = {
     backgrounds: {
       hero: "var(--gallery-wall)",
       label: "var(--gallery-wall)",
-      description: "var(--gallery-wall)",
-      reflection: "var(--gallery-wall)",
+      description: "var(--gallery-description)",
+      reflection: "var(--gallery-reflection)",
       nextRoom: "var(--gallery-wall)",
-},
+    }
 },
 
   thulaMoya: {
@@ -62,10 +62,10 @@ export const artworks = {
     backgrounds: {
       hero: "var(--gallery-wall)",
       label: "var(--gallery-wall)",
-      description: "var(--gallery-wall)",
-      reflection: "var(--gallery-wall)",
+      description: "var(--gallery-description)",
+      reflection: "var(--gallery-reflection)",
       nextRoom: "var(--gallery-wall)",
-},
+    }
   },
 
   whereTheFlameLives: {
@@ -84,10 +84,10 @@ export const artworks = {
     backgrounds: {
       hero: "var(--gallery-wall)",
       label: "var(--gallery-wall)",
-      description: "var(--gallery-wall)",
-      reflection: "var(--gallery-wall)",
+      description: "var(--gallery-description)",
+      reflection: "var(--gallery-reflection)",
       nextRoom: "var(--gallery-wall)",
-},
+    }
 },
 
   umthandazi: {
@@ -107,10 +107,10 @@ export const artworks = {
     backgrounds: {
       hero: "var(--gallery-wall)",
       label: "var(--gallery-wall)",
-      description: "var(--gallery-wall)",
-      reflection: "var(--gallery-wall)",
+      description: "var(--gallery-description)",
+      reflection: "var(--gallery-reflection)",
       nextRoom: "var(--gallery-wall)",
-},
+    }
   },
   indawoYomoya: {
     title: "Indawo YoMoya (The Place of Spirit)",
@@ -129,9 +129,9 @@ export const artworks = {
     backgrounds: {
       hero: "var(--gallery-wall)",
       label: "var(--gallery-wall)",
-      description: "var(--gallery-wall)",
-      reflection: "var(--gallery-wall)",
+      description: "var(--gallery-description)",
+      reflection: "var(--gallery-reflection)",
       nextRoom: "var(--gallery-wall)",
-},
+    }
   },
 };
