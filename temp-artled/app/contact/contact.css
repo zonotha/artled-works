@@ -1,0 +1,431 @@
+.contact-page {
+  width: 100%;
+  background: #111111;
+  color: #f7f4ee;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.site-nav {
+  width: 100%;
+  padding: 32px 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-nav .brand {
+  color: #111111;
+  text-decoration: none;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
+  letter-spacing: 0.28em;
+}
+
+.site-nav nav {
+  display: flex;
+  gap: 38px;
+}
+
+.site-nav nav a {
+  color: #111111;
+  text-decoration: none;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+
+  transition: color 180ms ease;
+}
+
+.site-nav nav a:hover {
+  color: #b7a58a;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.contact-hero {
+  position: relative;
+  min-height: 680px;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #f7f4ee;
+  color: #111111;
+}
+
+.contact-hero-content {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+
+  width: min(1100px, calc(100% - 100px));
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding-bottom: 80px;
+}
+
+.contact-artwork {
+  position: absolute;
+  width: 420px;
+  height: 560px;
+  right: 8%;
+  top: 120px;
+  overflow: hidden;
+  background: #f7f4ee;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.14);
+}
+
+.contact-art-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 58% 40%;
+}
+
+.section-label,
+.body-label {
+  margin: 0 0 24px;
+
+  color: #b7a58a;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.contact-hero h1 {
+  margin: 0;
+
+  color: #111111;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(80px, 11vw, 150px);
+  font-weight: 400;
+
+  line-height: 0.86;
+  letter-spacing: -0.065em;
+}
+
+.hero-description {
+  max-width: 430px;
+  margin: 42px 0 0;
+
+  color: #4b4842;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.gold-rule {
+  width: 45px;
+  height: 1px;
+
+  margin-top: 42px;
+
+  background: #b7a58a;
+}
+
+/* =========================
+   BODY
+========================= */
+
+.contact-body {
+  background: #111111;
+  padding: 125px 0 145px;
+}
+
+.contact-container {
+  width: min(1100px, calc(100% - 100px));
+  margin: 0 auto;
+}
+
+.contact-intro {
+  max-width: 650px;
+  margin-bottom: 115px;
+}
+
+.contact-intro h2 {
+  margin: 0 0 32px;
+
+  color: #f7f4ee;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(52px, 6vw, 82px);
+  font-weight: 400;
+
+  line-height: 0.93;
+  letter-spacing: -0.055em;
+}
+
+.contact-intro > p:last-child {
+  max-width: 500px;
+
+  margin: 0;
+
+  color: #d8d2c9;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* =========================
+   CONTACT GRID
+========================= */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 120px;
+
+  padding-top: 70px;
+  border-top: 1px solid #373532;
+}
+
+.contact-column {
+  min-width: 0;
+}
+
+.contact-detail,
+.social-link {
+  padding: 25px 0;
+
+  border-bottom: 1px solid #373532;
+}
+
+.contact-detail > span,
+.social-link > span {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #b7a58a;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 8px;
+  letter-spacing: 0.2em;
+}
+
+.contact-detail a,
+.social-link a {
+  color: #f7f4ee;
+  text-decoration: none;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 21px;
+
+  transition: color 180ms ease;
+}
+
+.contact-detail a:hover,
+.social-link a:hover {
+  color: #b7a58a;
+}
+
+.arrow {
+  display: inline-block;
+  margin-left: 12px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+
+/* =========================
+   LOCATION
+========================= */
+
+.contact-location {
+  margin-top: 125px;
+
+  padding-top: 45px;
+
+  border-top: 1px solid #373532;
+}
+
+.contact-location h3 {
+  margin: 0;
+
+  color: #f7f4ee;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(36px, 4vw, 55px);
+  font-weight: 400;
+
+  letter-spacing: -0.04em;
+}
+
+.contact-location > p:last-child {
+  margin: 12px 0 0;
+
+  color: #b7a58a;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+}
+
+/* =========================
+   CLOSING
+========================= */
+
+.contact-close {
+  min-height: 520px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 100px 30px;
+
+  background: #f7f4ee;
+  color: #111111;
+
+  text-align: center;
+}
+
+.contact-close-content h2 {
+  margin: 0;
+
+  color: #111111;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(52px, 6vw, 84px);
+  font-weight: 400;
+
+  line-height: 0.94;
+  letter-spacing: -0.055em;
+}
+
+.home-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+
+  margin-top: 42px;
+  padding: 13px 19px;
+
+  border: 1px solid #b7a58a;
+
+  color: #111111;
+  text-decoration: none;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+
+  transition:
+    background 180ms ease,
+    color 180ms ease,
+    gap 180ms ease;
+}
+
+.home-link:hover {
+  background: #111111;
+  color: #f7f4ee;
+  gap: 23px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.contact-footer {
+  min-height: 125px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f7f4ee;
+
+  border-top: 1px solid #ded8ce;
+}
+
+.contact-footer a {
+  color: #111111;
+  text-decoration: none;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 12px;
+  letter-spacing: 0.25em;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+  .contact-hero {
+    min-height: 560px;
+  }
+
+  .site-nav {
+    padding: 25px 22px;
+
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .site-nav nav {
+    gap: 18px;
+  }
+
+  .contact-hero-content,
+  .contact-container {
+    width: calc(100% - 44px);
+  }
+
+  .contact-hero-content {
+    padding-bottom: 65px;
+  }
+
+  .contact-hero h1 {
+    font-size: clamp(68px, 18vw, 100px);
+  }
+
+  .contact-artwork {
+    display: none;
+  }
+
+  .contact-body {
+    padding: 85px 0 100px;
+  }
+
+  .contact-intro {
+    margin-bottom: 80px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 75px;
+
+    padding-top: 50px;
+  }
+
+  .contact-location {
+    margin-top: 85px;
+  }
+
+  .contact-close {
+    min-height: 440px;
+  }
+}

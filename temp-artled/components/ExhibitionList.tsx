@@ -1,83 +1,156 @@
+import "./ExhibitionList.css";
 import Link from "next/link";
 import Container from "./Container";
 
 export default function ExhibitionList() {
   return (
-    <section className="exhibitions-list">
+    <main className="exhibitions-page">
 
-      <Container>
+      {/* HERO */}
+      <section className="exhibitions-hero">
+        <header className="site-nav">
+          <Link href="/" className="brand">
+            ARTLED WORKS
+          </Link>
 
-        <p className="section-label">
-          EXHIBITIONS
-        </p>
+          <nav>
+            <Link href="/exhibitions">Exhibitions</Link>
+            <Link href="/about">Artist</Link>
+            <Link href="/process">Process</Link>
+            <Link href="/contact">Contact</Link>
+          </nav>
+        </header>
 
-        <h2>
-          Three exhibitions.
-          <br />
-          Three conversations.
-        </h2>
+        <div className="exhibitions-hero-content">
+          <p className="section-label">EXHIBITIONS</p>
 
-        <div className="exhibition-item">
+          <h1>
+            Conversations
+            <br />
+            in form.
+          </h1>
 
-          <div>
+          <p className="hero-description">
+            Exhibitions are spaces for looking,
+            feeling and seeing something differently.
+            Each one offers another way into the work.
+          </p>
 
-            <h3>MOYA</h3>
+          <div className="hero-rule" />
+        </div>
+      </section>
+
+      {/* EXHIBITIONS */}
+      <section className="exhibitions-body">
+        <Container>
+
+          <div className="exhibitions-intro">
+            <p className="body-label">THE WORK IN CONTEXT</p>
+
+            <h2>
+              Where the work
+              <br />
+              meets the viewer.
+            </h2>
 
             <p>
-              Spirit, a force of life.
+              Each exhibition creates its own conversation
+              around the work — bringing together portraiture,
+              identity, presence and the stories carried within
+              them.
             </p>
+          </div>
+
+          <div className="exhibition-feature">
+
+            <div className="exhibition-number">
+              Exhibition I
+            </div>
+
+            <div className="exhibition-copy">
+              <p className="body-label">EXHIBITION</p>
+
+              <h3>MOYA</h3>
+
+              <p className="exhibition-tag">
+                Spirit, a force of life.
+              </p>
+
+              <p className="exhibition-description">
+                An exploration of spirit, presence and
+                the forces that move through us.
+              </p>
+
+              <Link
+                href="/exhibitions/moya"
+                className="exhibition-link"
+              >
+                <span>Enter Exhibition</span>
+                <span>→</span>
+              </Link>
+            </div>
 
           </div>
 
-          <Link href="/exhibitions/moya">
-            Continue →
-          </Link>
+          <div className="exhibition-divider" />
 
-        </div>
+          <div className="exhibition-feature">
 
-        <div className="divider"></div>
+            <div className="exhibition-number">
+              Exhibition II
+            </div>
 
-        <div className="exhibition-item">
+            <div className="exhibition-copy">
+              <p className="body-label">EXHIBITION</p>
 
-          <div>
+              <h3>SELECTED WORKS</h3>
 
-            <h3>SELECTED WORKS</h3>
+              <p className="exhibition-tag">
+                Portrait, identity and feminine presence.
+              </p>
 
-            <p>
-              Portrait studies celebrating African beauty,
-              identity and feminine presence.
-            </p>
+              <p className="exhibition-description">
+                A gathering of works celebrating African
+                beauty, identity and the many expressions
+                of feminine presence.
+              </p>
 
-          </div>
-
-          <Link href="#">
-            Continue →
-          </Link>
-
-        </div>
-
-        <div className="divider"></div>
-
-        <div className="exhibition-item">
-
-          <div>
-
-            <h3>TALES</h3>
-
-            <p>
-              Stories carried through portraiture.
-            </p>
+              <Link
+                href="/exhibitions/selected-works"
+                className="exhibition-link"
+              >
+                <span>Enter Exhibition</span>
+                <span>→</span>
+              </Link>
+            </div>
 
           </div>
 
-          <Link href="#">
-            Continue →
-          </Link>
+        </Container>
+      </section>
 
+      {/* CLOSING */}
+      <section className="exhibitions-close">
+        <div className="close-content">
+          <p className="section-label">ARTLED WORKS</p>
+
+          <h2>
+            Every exhibition
+            <br />
+            opens another way
+            <br />
+            of seeing.
+          </h2>
+
+          <div className="hero-rule" />
         </div>
+      </section>
 
-      </Container>
+      {/* FOOTER */}
+      <footer className="exhibitions-footer">
+        <Link href="/">ARTLED WORKS</Link>
+      </footer>
 
-    </section>
+    </main>
   );
 }

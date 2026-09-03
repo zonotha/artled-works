@@ -245,6 +245,48 @@ nav a:hover {
   color: #555;
   margin-bottom: 45px;
 }
+
+.featured-story-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+
+  margin-top: 30px;
+  padding: 13px 20px;
+
+  color: #111;
+  background: transparent;
+
+  border: 1px solid #b7a58a;
+
+  text-decoration: none;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+
+  transition:
+    background 180ms ease,
+    color 180ms ease,
+    gap 180ms ease;
+}
+
+.featured-story-arrow {
+  font-size: 15px;
+  line-height: 1;
+  transition: transform 180ms ease;
+}
+
+.featured-story-link:hover {
+  color: #f7f4ee;
+  background: #11100f;
+  gap: 23px;
+}
+
+.featured-story-link:hover .featured-story-arrow {
+  transform: translateX(3px);
+}
 /* ---------- ACTIVE NAVIGATION ---------- */
 
 .nav-link{
@@ -848,7 +890,7 @@ Description
 Next Room
 -----------------------------*/
 
-.next-room {
+.next-room{
     min-height: 45vh;
 
     display: flex;
@@ -863,7 +905,7 @@ Next Room
     );
 }
 
-.next-room-content{
+.-content{
 
     display:flex;
 
@@ -883,24 +925,22 @@ Next Room
 
 }
 
-.next-room-button{
+.next-room-button {
+  text-decoration: none;
 
-    text-decoration:none;
+  color: #2A2927;
 
-    color:#5A4634;
+  border: 1px solid #2A2927;
 
-    border:1px solid #D8CDC0;
+  background: #F8F5F2;
 
-    background:#EEE3D8;
+  padding: 14px 34px;
 
-    padding:14px 34px;
+  letter-spacing: .18em;
 
-    letter-spacing:.18em;
+  text-transform: uppercase;
 
-    text-transform:uppercase;
-
-    transition:.3s;
-
+  transition: .3s;
 }
 
 .next-room-button:hover{
@@ -1050,4 +1090,87 @@ Next Room
   .moya-ribbon {
     grid-template-columns: 1fr;
   }
+}
+/* ==========================
+   SELECTED WORKS
+========================== */
+
+.selected-works-page{
+    background:#F8F5F2;
+}
+
+.selected-works-hero{
+
+    padding:180px 0 120px;
+
+    text-align:center;
+}
+
+.selected-works-hero h1{
+
+    font-size:5rem;
+
+    margin:20px 0;
+}
+
+.selected-intro{
+
+    max-width:720px;
+
+    margin:auto;
+
+    line-height:2;
+
+    color:#666;
+}
+
+.selected-list{
+
+    max-width:900px;
+
+    margin:0 auto;
+
+    padding:0 0 180px;
+}
+
+.selected-card{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:55px 0;
+
+    border-bottom:1px solid #DDD;
+
+    text-decoration:none;
+
+    color:inherit;
+
+    transition:.35s;
+}
+
+.selected-card:hover{
+
+    transform:translateX(12px);
+}
+
+.selected-card h2{
+
+    font-size:2rem;
+
+    font-weight:400;
+}
+
+.selected-card span{
+
+    letter-spacing:.18em;
+
+    text-transform:uppercase;
+
+    font-size:.82rem;
+
+    color:#8A7E72;
 }

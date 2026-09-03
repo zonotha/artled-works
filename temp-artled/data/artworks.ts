@@ -133,5 +133,148 @@ export const artworks = {
       reflection: "var(--gallery-reflection)",
       nextRoom: "var(--gallery-wall)",
     }
+    },
+
+  // ================================
+  // SELECTED WORKS
+  // ================================
+
+  shadesOfCleopatra: {
+    title: "Shades of Cleopatra",
+    collection: "Selected Works",
+    year: "2024",
+    medium: "Graphite",
+    dimensions: "A2",
+    tag: "Beauty, identity and presence.",
+    description: `Here, Cleopatra is imagined through the richness of African womanhood: powerful, composed, adorned and deeply rooted. Her beauty is only one layer. Beneath it is a woman whose presence carries weight — regal, assured and entirely aware of her own power.
+
+There is richness in her silence. In the stillness of her gaze, the depth of her adornment, and the quiet authority with which she occupies space. She is feminine without being softened by it; regal without distance; powerful without performance.
+
+Cleopatra has been imagined countless ways. Shades of Cleopatra is one more interpretation — a personal imagining of a woman whose image has lived through history, reinterpreted through the richness, strength and complexity of African womanhood.
+
+This is my Cleopatra — not a replica of history, but a reflection of the many shades a woman can carry: beauty, dominance, heritage, intellect, sensuality and strength.
+
+A queen imagined through the lens of African womanhood.`,
+    image: "/artworks/selected-works/shade-of-cleopatra.png",
+
+    backgrounds: {
+      hero: "#171514",
+      label: "#171514",
+      description: "#171514",
+      reflection: "#171514",
+      nextRoom: "#171514",
+    },
   },
+
+  nurubian: {
+  title: "Nurubian",
+  collection: "Selected Works",
+  year: "2026",
+  medium: "Digital Painting",
+  dimensions: "A2",
+  tag: "Beauty in her truest form.",
+  description: `There is a quietness to her beauty — the kind that does not ask to be noticed, yet holds the eye.
+
+Nurubian carries the richness of her skin, the poetry of her features, and the stillness of a woman completely at home in herself. There is nothing excessive in her presence. Nothing added for approval. She exists in the fullness of what she already is.
+
+Her shaved head becomes part of that language — a return to something elemental, natural and unadorned. It speaks to a beauty that does not depend on convention, but finds its own expression in freedom, simplicity and self-knowing.
+
+Nurubian feels like light meeting lineage: a quiet celebration of African beauty, rootedness and the woman beneath every expectation.
+
+She is simply, beautifully herself.`,
+  image: "/artworks/selected-works/nurubian.png",
+
+  backgrounds: {
+    hero: "#F8F5F2",
+    label: "#F8F5F2",
+    description: "#F4ECE3",
+    reflection: "#F8F5F2",
+    nextRoom: "#F8F5F2",
+  },
+},
+
+  kamau: {
+  title: "Kamau",
+  collection: "Selected Works",
+  year: "2026",
+  medium: "Digital Painting",
+  dimensions: "A2",
+  tag: "Quiet strength. Quiet warrior.",
+  description: `Kamau carries the strength and pride of African womanhood with a presence that is entirely her own. Rooted in heritage, she carries with her the memory of the strong women who walked before her — not as a figure of the past, but as a woman firmly present in her own time, proud of where she comes from and who she has become.
+
+The marking across her nose speaks to an ancient visual language carried through African cultures, grounding her in something deeper than the moment. Her strength lives in that connection: in knowing what has come before, and choosing to carry it forward.
+
+Her gaze is sharp and focused. Her beauty, however, is quieter than her command. It lives in her aura — in the stillness of her presence, the certainty of her posture, and the quiet knowledge of who she is.
+
+Kamau is not defined by the need to be protected or conformed. She stands as protector, as woman, as individual — carrying her heritage with pride and her strength without apology.`,
+  image: "/artworks/selected-works/kamau.png",
+
+  backgrounds: {
+    hero: "#F8F5F2",
+    label: "#F8F5F2",
+    description: "#F4ECE3",
+    reflection: "#F8F5F2",
+    nextRoom: "#F8F5F2",
+  },
+},
+
+  untitled: {
+  title: "Untitled",
+  collection: "Selected Works",
+  year: "2023",
+  medium: "Graphite",
+  dimensions: "A2",
+  tag: "Presence beyond definition.",
+  description: `There is a quiet elegance in her presence.
+
+The richness of her beauty is held in the details — the softness of her features, the quietness of her expression, and the neckpiece that elevates her presence with a sense of refinement.
+
+Nothing is overstated. She is simply beautiful, composed and entirely at ease in her own presence.
+
+Untitled is a celebration of beauty without explanation — allowing elegance, femininity and presence to speak for themselves.`,
+  image: "/artworks/selected-works/untitled.png",
+
+  backgrounds: {
+    hero: "#171514",
+    label: "#171514",
+    description: "#171514",
+    reflection: "#171514",
+    nextRoom: "#171514",
+  },
+},
+
+  tales: {
+  title: "Tales",
+  collection: "Selected Works",
+  year: "2026",
+  medium: "Graphite",
+  dimensions: "A2",
+  tag: "Every portrait remembers.",
+  description: `Some stories are carried in words.
+Others settle quietly into the body.
+
+In Tales, memory is worn rather than spoken. The hair carries fragments of a life — its chapters, its histories, its moments of becoming. The scars are not symbols of defeat, but marks of having lived.
+
+There are wounds that life leaves without asking permission. Bruises that fade. Others remain.
+She carries them all.
+
+Not asking to be understood through them, but with the quiet pride of someone who knows what it means to survive herself — and still stand beautifully in her own presence.`,
+  image: "/artworks/selected-works/tales.png",
+
+  backgrounds: {
+    hero: "#F8F5F2",
+    label: "#F8F5F2",
+    description: "#F4ECE3",
+    reflection: "#F8F5F2",
+    nextRoom: "#F8F5F2",
+  },
+},
 };
+
+export const selectedWorks = [
+  artworks.tales,
+  artworks.kamau,
+  artworks.shadesOfCleopatra,
+  artworks.nurubian,
+  artworks.untitled,
+];

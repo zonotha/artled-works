@@ -3,14 +3,12 @@ import Image from "next/image";
 interface MagazineSpreadProps {
   title: string;
   medium: string;
- year: string;
+  year: string;
   image: string;
-
   children: React.ReactNode;
-
   reverse?: boolean;
-
   background?: string;
+  imageScale?: number;
 }
 
 export default function MagazineSpread({
@@ -21,7 +19,11 @@ export default function MagazineSpread({
   children,
   reverse = false,
   background = "#F8F5F2",
+  imageScale = 1,
 }: MagazineSpreadProps) {
+
+  const isDark = background === "#171514";
+
   return (
     <section
       style={{
@@ -29,25 +31,27 @@ export default function MagazineSpread({
         minHeight: "100vh",
         display: "flex",
         alignItems: "center",
-        padding: "120px 8%",
+        padding: "100px 6%",
       }}
     >
       <div
         style={{
+          width: "100%",
           display: "grid",
           gridTemplateColumns: "1fr 1fr",
           gap: "80px",
           alignItems: "center",
-
           direction: reverse ? "rtl" : "ltr",
         }}
       >
+        {/* IMAGE */}
+
         <div
           style={{
             direction: "ltr",
             position: "relative",
             width: "100%",
-            height: "720px",
+            height: "900px",
           }}
         >
           <Image
@@ -56,21 +60,25 @@ export default function MagazineSpread({
             fill
             style={{
               objectFit: "contain",
+              transform: `scale(${imageScale})`,
             }}
           />
         </div>
+
+        {/* TEXT */}
 
         <div
           style={{
             direction: "ltr",
             maxWidth: "520px",
+            color: isDark ? "#F8F5F2" : "#171514",
           }}
         >
           <p
             style={{
               letterSpacing: ".18em",
               textTransform: "uppercase",
-              opacity: .55,
+              opacity: 0.55,
               marginBottom: "20px",
             }}
           >
@@ -89,8 +97,8 @@ export default function MagazineSpread({
 
           <div
             style={{
-              lineHeight: 2,
-              fontSize: "1.08rem",
+              lineHeight: 1.7,
+              fontSize: "1rem",
             }}
           >
             {children}

@@ -1,4 +1,4 @@
-import Button from "./Button";
+import Link from "next/link";
 import Container from "./Container";
 
 export default function FeaturedArtwork() {
@@ -9,7 +9,9 @@ export default function FeaturedArtwork() {
 
         <h2>The Awakening</h2>
 
-        <p className="featured-tag">Transformation begins in the unseen.</p>
+        <p className="featured-tag">
+          Transformation begins in the unseen.
+        </p>
 
         <p className="featured-description">
           Becoming is rarely sudden. It unfolds quietly through movement, choice
@@ -17,7 +19,10 @@ export default function FeaturedArtwork() {
           and who we are becoming.
         </p>
 
-        <Button>Read the Story</Button>
+        <Link href="/awakening" className="featured-story-link">
+          <span>Read the Story</span>
+          <span className="featured-story-arrow">→</span>
+        </Link>
       </Container>
     </section>
   );
