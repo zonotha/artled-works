@@ -12,6 +12,11 @@ export const artworks = {
    "The figure is veiled in vivid blue, a symbol of spiritual depth, protection, and identity. Her gaze is rooted in ancestral memory and personal knowing—fierce, calm, and alive. Veil of Strength speaks to the spirit that guards, endures, and sees beyond.",
 
     image: "/artworks/moya/veil-of-strength-digital.png",
+    orientation: "landscape" as const,
+    reflection: [
+      "Veil of Strength is the opening work of MOYA.",
+      "It introduces the quiet tension between concealment and revelation, asking what is hidden, what is protected, and what chooses to be seen.",
+    ],
 
     backgrounds: {
       hero: "var(--gallery-wall)",
@@ -35,6 +40,11 @@ export const artworks = {
     "A monochrome reflection of Veil of Strength, this portrait strips away colour while preserving its essence. The absence of blue shifts the focus toward form, gaze, and presence, allowing the quiet strength of spirit to emerge through light, shadow, and expression alone.",
 
     image: "/artworks/moya/veil-of-strength-monochrome.png",
+    orientation: "landscape" as const,
+    reflection: [
+      "As a companion to Veil of Strength, this monochrome portrait shifts the conversation from colour to presence.",
+      "Without the symbolism of blue, the gaze carries the work alone, inviting a quieter encounter with identity, resilience, and spirit.",
+    ],
 
     backgrounds: {
       hero: "var(--gallery-wall)",
@@ -58,6 +68,11 @@ export const artworks = {
     "Eyes closed, spirit open. This portrait honours the quiet strength of a woman at rest within herself. Adorned in traditional symbols and markings, she reflects a deep-rooted identity shaped by heritage and peace. Thula Moya is a tribute to the unseen spiritual life held gently behind stillness.",
     
     image: "/artworks/moya/thula-moya.png",
+    orientation: "portrait" as const,
+    reflection: [
+      "Eyes closed, spirit open.",
+      "In stillness we often mistake silence for emptiness, yet it is within quietness that spirit speaks most clearly. Thula Moya invites us to rest—not in resignation, but in peace. It honours the strength found in remaining rooted in who we are, where heritage, memory and spirit breathe together.",
+    ],
 
     backgrounds: {
       hero: "var(--gallery-wall)",
@@ -80,6 +95,12 @@ export const artworks = {
     "In cupped hands, a single flame burns—not for the world, but from within. Where the Flame Lives captures the quiet pulse of spirit: a soul held gently, protected fiercely. It speaks of faith, remembrance, and the enduring power of light carried in love—the strength required to hold on to hope, and the tenderness needed to nurture it.",
 
     image: "/artworks/moya/where-the-flame-lives.png",
+    orientation: "portrait" as const,
+    reflection: [
+      "Every spirit carries a light.",
+      "Some flames illuminate the path ahead. Others simply remind us not to lose our way.",
+      "Where the Flame Lives is a meditation on the quiet work of hope. It is the strength to protect what cannot be replaced, the tenderness to nurture what still burns, and the faith to believe that even the smallest light can endure the darkest night.",
+    ],
 
     backgrounds: {
       hero: "var(--gallery-wall)",
@@ -103,6 +124,12 @@ export const artworks = {
     "Rendered in graphite and memory, this portrait reflects the enduring presence of spirit through the elders who walk with us, seen and unseen. Umthandazi is a sacred pause—a moment of grace held in the hands of a woman whose faith became both armour and offering. The rosary becomes a tether between generations, connecting those who came before with those yet to come.",
 
     image: "/artworks/moya/umthandazi.png",
+    orientation: "portrait" as const,
+    reflection: [
+      "Some prayers are never spoken aloud.",
+      "They are carried in the quiet devotion of those who came before us, woven into everyday acts of faith, love and sacrifice.",
+      "Umthandazi honours the spiritual pillars of our lives—the mothers, grandmothers and elders whose prayers became an unseen inheritance, shaping us long before we understood the strength they were giving us.",
+    ],
 
     backgrounds: {
       hero: "var(--gallery-wall)",
@@ -125,6 +152,12 @@ export const artworks = {
     "She sits between worlds—grounded in form yet open to what breathes beyond. The beads around her neck echo stories carried across generations, while the stillness in her posture becomes a meditation in itself. Indawo YoMoya honours the quiet rituals and unseen forces that anchor us to spirit and self—a sacred place where breath slows, silence deepens, and the soul listens.",
 
     image: "/artworks/moya/indawo-yomoya.png",
+    orientation: "portrait" as const,
+    reflection: [
+      "Every journey eventually returns to where it first began.",
+      "Some beginnings announce themselves. Others wait patiently until we are ready to recognise them.",
+      "Perhaps the place of spirit was never somewhere we had to find—only somewhere we had to remember.",
+    ],
 
     backgrounds: {
       hero: "var(--gallery-wall)",

@@ -8,17 +8,10 @@ export default function ExhibitionList() {
 
       {/* HERO */}
       <section className="exhibitions-hero">
-        <header className="site-nav">
-          <Link href="/" className="brand">
+        <header className="exhibitions-nav">
+          <Link href="/" className="exhibitions-brand">
             ARTLED WORKS
           </Link>
-
-          <nav>
-            <Link href="/exhibitions">Exhibitions</Link>
-            <Link href="/about">Artist</Link>
-            <Link href="/process">Process</Link>
-            <Link href="/contact">Contact</Link>
-          </nav>
         </header>
 
         <div className="exhibitions-hero-content">

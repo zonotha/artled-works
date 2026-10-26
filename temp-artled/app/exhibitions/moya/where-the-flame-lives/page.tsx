@@ -30,13 +30,12 @@ export default function WhereTheFlameLives() {
     background={artwork.backgrounds.label}
   />
 
-  <Description background={artwork.backgrounds.description}>
+  <Description>
     {artwork.description}
   </Description>
 
   <Reflection
   title="Reflection"
-  background={artwork.backgrounds.reflection}
 >
   <p>
     Every spirit carries a light.

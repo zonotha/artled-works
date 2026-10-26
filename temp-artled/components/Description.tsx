@@ -1,12 +1,8 @@
 interface DescriptionProps {
   children: React.ReactNode;
-  background: string;
 }
 
-export default function Description({
-  children,
-  background,
-}: DescriptionProps) {
+export default function Description({ children }: DescriptionProps) {
   return (
     <section
       className="description"

@@ -6,6 +6,12 @@ export default function SelectedWorksPage() {
   return (
     <main>
 
+      <header className="selected-works-nav">
+        <Link href="/" className="selected-works-brand">
+          ARTLED WORKS
+        </Link>
+      </header>
+
       {/* HERO */}
 
 <section

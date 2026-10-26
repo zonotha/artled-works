@@ -7,7 +7,6 @@ interface EntranceWallProps {
   title: string;
   background: string;
   orientation?: "portrait" | "landscape";
-  scale?: number;
 }
 
 export default function EntranceWall({
@@ -15,7 +14,6 @@ export default function EntranceWall({
   title,
   background,
   orientation = "portrait",
-  scale = 1,
 }: EntranceWallProps) {
   return (
     <section

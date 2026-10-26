@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import "./contact.css";
 
 export default function Contact() {
@@ -8,17 +8,10 @@ export default function Contact() {
 
       {/* HERO */}
       <section className="contact-hero">
-        <header className="site-nav">
-          <Link href="/" className="brand">
+        <header className="contact-nav">
+          <Link href="/" className="contact-brand">
             ARTLED WORKS
           </Link>
-
-          <nav>
-            <Link href="/exhibitions">Exhibitions</Link>
-            <Link href="/about">Artist</Link>
-            <Link href="/process">Process</Link>
-            <Link href="/contact">Contact</Link>
-          </nav>
         </header>
 
         <div className="contact-hero-content">
@@ -34,18 +27,22 @@ export default function Contact() {
           <div className="gold-rule" />
         </div>
 
-        <div className="contact-artwork">
-          <Image
-            src="/images/contact-sketch.jpeg"
-            alt="Artwork in progress"
-            fill
-            className="contact-art-image"
-          />
-        </div>
       </section>
 
       {/* CONTACT BODY */}
       <section className="contact-body">
+        <div className="contact-art-background">
+          <Image
+            src="/images/contact-sketch.jpeg"
+            alt=""
+            fill
+            priority={false}
+            className="contact-art-image"
+          />
+        </div>
+
+        <div className="contact-art-fade" />
+
         <div className="contact-container">
 
           <div className="contact-intro">

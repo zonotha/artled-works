@@ -60,7 +60,6 @@ h1 {
   position: relative;
   z-index: 2;
 }
- 
 
 .hero-artwork {
   flex: 0 0 460px;
@@ -181,6 +180,8 @@ h1 {
 }
 
 .nav-container {
+  width: 90%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -580,123 +581,13 @@ Exhibition Statement
 Transition Room
 -----------------------------*/
 
-.transition-room{
-
-    min-height:100vh;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    background:#F8F5F2;
-
-    padding:120px 40px;
-
-}
-
-.transition-content{
-
-    max-width:820px;
-
-    margin:auto;
-
-    text-align:center;
-
-}
-
-.transition-label{
-
-    letter-spacing:.35em;
-
-    text-transform:uppercase;
-
-    font-size:.75rem;
-
-    color:#7A6A5A;
-
-    margin-bottom:20px;
-
-}
-
-.transition-content h2{
-
-    font-size:3.4rem;
-
-    font-family:var(--font-cormorant);
-
-    font-weight:400;
-
-    margin-bottom:40px;
-
-}
-
-.transition-text{
-
-    font-size:1.2rem;
-
-    line-height:2;
-
-    color:#444;
-
-}
-
 /* ------------------------------
    Gallery Transition
 ------------------------------- */
 
-.gallery-transition{
-
-    min-height:35vh;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    align-items:center;
-
-    background:#F8F5F2;
-
-}
-
-.gallery-transition p{
-
-    letter-spacing:.25em;
-
-    text-transform:uppercase;
-
-    font-size:.75rem;
-
-    color:#8A7E72;
-
-}
-
-.transition-line{
-
-    height:1px;
-
-    background:#8A7E72;
-
-    margin-top:28px;
-
-}
-
 /* ------------------------
 Gallery Room
 -------------------------*/
-
-.gallery-room{
-
-    background:#F8F5F2;
-
-    min-height:100vh;
-
-    padding:120px 8%;
-
-}
 
 /* -----------------------
 Artwork Label
@@ -905,18 +796,6 @@ Next Room
     );
 }
 
-.-content{
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
-    gap:40px;
-
-}
-
 .next-room-divider{
 
     font-size:1.2rem;
@@ -999,27 +878,100 @@ Next Room
   font-style: italic;
 }
 
-/* ---------- Ribbon ---------- */
+/* ---------- MOYA — Homepage Album Ribbon ---------- */
+
+.moya-ribbon-wrapper {
+  position: relative;
+  width: 100%;
+}
 
 .moya-ribbon {
-  display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 1.5rem;
-  align-items: end;
-  margin-bottom: 5rem;
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-end;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0 4rem 1.5rem;
+  margin-bottom: 0;
+
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+
+  cursor: grab;
+  user-select: none;
+  touch-action: pan-x;
+}
+
+.moya-ribbon:active {
+  cursor: grabbing;
+}
+
+.moya-ribbon::-webkit-scrollbar {
+  display: none;
+}
+
+/* Desktop navigation */
+
+.moya-arrow {
+  position: absolute;
+  top: 45%;
+  z-index: 10;
+
+  width: 58px;
+  height: 58px;
+
+  border: 1px solid rgba(199, 164, 106, .45);
+  border-radius: 50%;
+
+  background: rgba(17, 17, 17, .9);
+  color: var(--gold);
+
+  font-size: 1.5rem;
+  line-height: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition:
+    background .3s ease,
+    border-color .3s ease,
+    transform .3s ease,
+    opacity .3s ease;
+}
+
+.moya-arrow:hover {
+  background: rgba(199, 164, 106, .12);
+  border-color: var(--gold);
+  transform: scale(1.06);
+}
+
+.moya-arrow-left {
+  left: 1rem;
+}
+
+.moya-arrow-right {
+  right: 1rem;
 }
 
 .moya-piece {
+  flex: 0 0 320px;
   display: block;
   text-decoration: none;
   color: inherit;
-  transition: opacity .35s ease, transform .35s ease;
+  transition:
+    opacity .35s ease,
+    transform .35s ease;
 }
 
 .moya-piece-image {
   position: relative;
   width: 100%;
-  height: 360px;
+  height: 500px;
 
   display: flex;
   align-items: center;
@@ -1029,10 +981,10 @@ Next Room
 }
 
 .moya-piece-image.landscape {
-  height: 430px;
+  height: 500px;
 }
 
-.moya-image {
+.current-exhibition .moya-image {
   object-fit: contain;
   object-position: center;
   transition: transform .45s ease;
@@ -1043,7 +995,7 @@ Next Room
 }
 
 .moya-piece:hover .moya-image {
-  transform: scale(1.05);
+  transform: scale(1.07);
 }
 
 .moya-ribbon:hover .moya-piece {
@@ -1059,6 +1011,29 @@ Next Room
   min-height: 56px;
 }
 
+.moya-gallery-cta {
+  margin-top: 9rem;
+  padding: 2rem 0 1rem;
+  text-align: center;
+}
+
+.moya-gallery-cta-subtitle {
+  margin: 0 0 1.8rem;
+  color: #ffffff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.9rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.moya-gallery-cta a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 0.85rem;
+}
+
 .moya-piece-title span {
   display: block;
   color: var(--gold);
@@ -1072,28 +1047,16 @@ Next Room
   font-style: italic;
 }
 
-/* ---------- Responsive ---------- */
-
-@media (max-width: 1100px) {
-  .moya-ribbon {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 @media (max-width: 700px) {
-  .moya-ribbon {
-    grid-template-columns: repeat(2, 1fr);
+  .moya-arrow {
+    display: none;
   }
-}
 
-@media (max-width: 500px) {
   .moya-ribbon {
-    grid-template-columns: 1fr;
+    padding: 0 1rem 1.5rem;
+    gap: 1.75rem;
   }
 }
-/* ==========================
-   SELECTED WORKS
-========================== */
 
 .selected-works-page{
     background:#F8F5F2;
@@ -1173,4 +1136,850 @@ Next Room
     font-size:.82rem;
 
     color:#8A7E72;
+}
+
+/* =========================================================
+  MOYA — SCROLL
+   ========================================================= */
+
+.moya-page {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #F8F5F2;
+  color: #1B1B1B;
+}
+
+.moya-scroll {
+  width: 100%;
+  height: 100vh;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  overscroll-behavior: contain;
+}
+
+.moya-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.moya-track {
+  display: flex;
+  flex-direction: row;
+  width: max-content;
+  height: 100%;
+}
+
+/* =========================================================
+   EACH HORIZONTAL MOMENT
+   ========================================================= */
+
+.moya-panel {
+  position: relative;
+  flex: 0 0 100vw;
+  width: 100vw;
+  height: 100vh;
+  min-height: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   OPENING
+   ========================================================= */
+
+.moya-opening {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #111111;
+  color: #F7F4EE;
+}
+
+.moya-brand {
+  position: absolute;
+  top: 34px;
+  left: 5%;
+  z-index: 10;
+
+  color: var(--gold);
+  font-family: Georgia, serif;
+  font-size: 1.1rem;
+  line-height: 1;
+  letter-spacing: 0.2rem;
+  text-decoration: none;
+}
+
+.moya-opening-content {
+  width: min(680px, 80%);
+  text-align: center;
+}
+
+.moya-eyebrow {
+  margin: 0 0 24px;
+
+  color: var(--gold-soft);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.moya-opening h1 {
+  margin: 0;
+
+  color: var(--gold);
+  font-family: Georgia, serif;
+  font-size: clamp(5rem, 12vw, 10rem);
+  font-weight: 400;
+  line-height: 0.85;
+}
+
+.moya-rule {
+  width: 80px;
+  height: 1px;
+  margin: 42px auto;
+
+  background: rgba(199, 164, 106, 0.65);
+}
+
+.moya-introduction {
+  max-width: 520px;
+  margin: 0 auto;
+
+  color: #D8C9B2;
+  font-family: Georgia, serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.moya-scroll-hint {
+  margin: 55px 0 0;
+
+  color: var(--gold-soft);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   ARTWORK PANELS
+   ========================================================= */
+
+/* =========================================================
+   ARTWORK IMAGE AREA
+   ========================================================= */
+
+.moya-image-wrap {
+  position: relative;
+
+  width: 100%;
+  min-height: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.moya-image {
+  object-fit: contain;
+  object-position: center;
+}
+
+/* =========================================================
+   LABEL / INFORMATION
+   ========================================================= */
+
+/* =========================================================
+   DESCRIPTION / REFLECTION
+   ========================================================= */
+
+/* =========================================================
+   MOYA — HORIZONTAL EXHIBITION
+   ========================================================= */
+
+.moya-page {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #111111;
+  color: #f7f4ee;
+}
+
+.moya-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  pointer-events: none;
+}
+
+.moya-brand {
+  pointer-events: auto;
+  color: #c7a46a;
+  text-decoration: none;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.2rem;
+  transition: opacity 0.3s ease;
+}
+
+.moya-brand:hover {
+  opacity: 0.7;
+}
+
+.moya-scroll {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+
+  overscroll-behavior-x: contain;
+  overscroll-behavior-y: none;
+}
+
+.moya-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.moya-track {
+  display: flex;
+  flex-direction: row;
+  width: max-content;
+  min-width: max-content;
+  height: 100vh;
+}
+
+.moya-panel {
+  position: relative;
+  flex: 0 0 100vw;
+  width: 100vw;
+  height: 100vh;
+  min-height: 0;
+  box-sizing: border-box;
+}
+
+.moya-opening {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7f4ee;
+  color: #111111;
+  padding: 120px 8vw 100px;
+}
+
+.moya-opening-inner {
+  width: min(760px, 100%);
+  text-align: center;
+}
+
+.moya-eyebrow {
+  margin: 0 0 25px;
+  color: #b7a58a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.moya-opening h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(5.5rem, 13vw, 11rem);
+  font-weight: 400;
+  line-height: 0.8;
+  letter-spacing: -0.045em;
+}
+
+.moya-opening-title {
+  margin: 35px 0 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.25rem, 2vw, 1.7rem);
+  font-style: italic;
+  line-height: 1.35;
+}
+
+.moya-opening-rule {
+  width: 48px;
+  height: 1px;
+  margin: 34px 0;
+  background: #b7a58a;
+}
+
+.moya-opening-inner .moya-opening-rule {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.moya-opening-text {
+  max-width: 590px;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.94rem;
+  line-height: 1.85;
+  letter-spacing: 0.015em;
+}
+
+.moya-opening-instruction {
+  margin: 52px 0 0;
+  color: #777064;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.66rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.moya-landscape-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(330px, 0.7fr);
+  grid-template-rows: auto;
+  gap: 4vw;
+  align-items: center;
+  background: #111111;
+  padding: 82px 6vw 52px;
+}
+
+.moya-landscape-art,
+.moya-portrait-art {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+}
+
+.moya-landscape-art .moya-image-wrap {
+  position: relative;
+  width: 100%;
+  height: min(40vh, 400px);
+}
+
+.moya-image-wrap {
+  overflow: hidden;
+  background: #181818;
+}
+
+.moya-image {
+  object-fit: contain;
+  object-position: center;
+}
+
+.moya-landscape-info {
+  min-width: 0;
+  max-width: 470px;
+  align-self: center;
+}
+
+.moya-wall-label {
+  position: relative;
+}
+
+.moya-work-label {
+  margin: 0 0 10px;
+  color: #b7a58a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+.moya-wall-label h2 {
+  margin: 0;
+  color: #f7f4ee;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.1rem, 3.3vw, 3.8rem);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.025em;
+}
+
+.moya-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 15px;
+  margin-top: 14px;
+  color: #d4cec2;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.moya-dimensions {
+  display: none;
+}
+
+.moya-tag {
+  max-width: 400px;
+  margin: 13px 0 0;
+  color: #b7a58a;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.94rem;
+  font-style: italic;
+  line-height: 1.35;
+}
+
+.moya-landscape-copy {
+  margin-top: 24px;
+}
+
+.moya-description,
+.moya-reflection {
+  max-width: 460px;
+}
+
+.moya-section-label {
+  margin: 0 0 15px;
+  color: #b7a58a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.moya-description > p:last-child,
+.moya-reflection > div {
+  margin: 0;
+  color: #d8d2c8;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.78rem;
+  line-height: 1.58;
+}
+
+.moya-description > p:last-child {
+  margin-bottom: 0;
+}
+
+.moya-reflection {
+  margin-top: 20px;
+  padding-top: 17px;
+  border-top: 1px solid rgba(199, 164, 106, 0.28);
+}
+
+.moya-reflection p {
+  margin: 0 0 9px;
+}
+
+.moya-reflection p:last-child {
+  margin-bottom: 0;
+}
+
+.moya-portrait-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #111111;
+  padding: 78px 6vw 55px;
+}
+
+.moya-portrait-main {
+  display: grid;
+  grid-template-columns: minmax(340px, 43vw) minmax(260px, 330px);
+  gap: 3.5vw;
+  align-items: center;
+  justify-content: center;
+  width: min(1120px, 100%);
+  margin: 0 auto;
+}
+
+.moya-portrait-art .moya-image-wrap {
+  position: relative;
+  width: 100%;
+  height: min(57vh, 570px);
+}
+
+.moya-portrait-art .moya-image {
+  object-fit: contain;
+  object-position: center;
+}
+
+.moya-portrait-main .moya-wall-label {
+  align-self: center;
+  max-width: 350px;
+}
+
+.moya-portrait-main .moya-wall-label h2 {
+  font-size: clamp(2.5rem, 4vw, 4.3rem);
+}
+
+.moya-portrait-copy {
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr) minmax(280px, 1fr);
+  gap: 4vw;
+  width: min(1120px, 100%);
+  margin: 25px auto 0;
+  padding-top: 21px;
+  border-top: 1px solid rgba(199, 164, 106, 0.28);
+}
+
+.moya-portrait-copy .moya-reflection {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.moya-portrait-copy .moya-description > p:last-child,
+.moya-portrait-copy .moya-reflection > div {
+  font-size: 0.78rem;
+  line-height: 1.58;
+}
+
+.moya-closing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7f4ee;
+  color: #111111;
+  padding: 100px 8vw;
+  text-align: center;
+}
+
+.moya-closing-inner {
+  width: min(700px, 100%);
+}
+
+.moya-closing .moya-eyebrow {
+  color: #b7a58a;
+}
+
+.moya-closing h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3.8rem, 7vw, 7rem);
+  font-weight: 400;
+  line-height: 0.94;
+  letter-spacing: -0.035em;
+}
+
+.moya-closing .moya-opening-rule {
+  margin: 38px auto;
+}
+
+.moya-closing p:not(.moya-eyebrow) {
+  max-width: 540px;
+  margin: 0 auto;
+  color: #3d3a35;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.8;
+}
+
+.moya-return {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 45px;
+  color: #111111;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: gap 0.3s ease, opacity 0.3s ease;
+}
+
+.moya-return:hover {
+  gap: 23px;
+  opacity: 0.65;
+}
+
+.moya-return span {
+  font-size: 1rem;
+}
+
+.moya-footer {
+  position: fixed;
+  right: 5%;
+  bottom: 28px;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.moya-footer a {
+  pointer-events: auto;
+  color: rgba(247, 244, 238, 0.72);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.moya-footer a:hover {
+  color: #c7a46a;
+}
+
+@media (max-width: 1000px) {
+  .moya-landscape-panel {
+    grid-template-columns: minmax(0, 1.3fr) minmax(300px, 0.7fr);
+    gap: 4vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  .moya-landscape-art .moya-image-wrap {
+    height: min(58vh, 570px);
+  }
+
+  .moya-portrait-main {
+    grid-template-columns: minmax(330px, 46vw) minmax(250px, 320px);
+    gap: 4vw;
+  }
+
+  .moya-portrait-art .moya-image-wrap {
+    height: min(63vh, 650px);
+  }
+
+  .moya-portrait-copy {
+    gap: 4vw;
+  }
+}
+
+@media (max-width: 700px) {
+  .moya-header {
+    height: 62px;
+    padding: 0 6%;
+  }
+
+  .moya-brand {
+    font-size: 0.9rem;
+    letter-spacing: 0.16rem;
+  }
+
+  .moya-panel {
+    min-height: 100vh;
+  }
+
+  .moya-opening {
+    padding: 100px 9vw 80px;
+  }
+
+  .moya-opening h1 {
+    font-size: clamp(5rem, 25vw, 8rem);
+  }
+
+  .moya-opening-title {
+    margin-top: 28px;
+    font-size: 1.15rem;
+  }
+
+  .moya-opening-text {
+    font-size: 0.83rem;
+    line-height: 1.75;
+  }
+
+  .moya-opening-instruction {
+    margin-top: 42px;
+    font-size: 0.58rem;
+  }
+
+  .moya-landscape-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 30px;
+    padding: 90px 7vw 70px;
+  }
+
+  .moya-landscape-art .moya-image-wrap {
+    height: 42vh;
+    min-height: 260px;
+  }
+
+  .moya-landscape-info {
+    max-width: none;
+  }
+
+  .moya-wall-label h2,
+  .moya-portrait-main .moya-wall-label h2 {
+    font-size: clamp(2.1rem, 10vw, 3.4rem);
+  }
+
+  .moya-meta {
+    margin-top: 16px;
+    font-size: 0.59rem;
+    gap: 6px 14px;
+  }
+
+  .moya-tag {
+    margin-top: 16px;
+    font-size: 0.94rem;
+  }
+
+  .moya-landscape-copy {
+    margin-top: 35px;
+  }
+
+  .moya-description > p:last-child,
+  .moya-reflection > div {
+    font-size: 0.79rem;
+    line-height: 1.72;
+  }
+
+  .moya-reflection {
+    margin-top: 32px;
+    padding-top: 25px;
+  }
+
+  .moya-portrait-panel {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    padding: 82px 7vw 65px;
+  }
+
+  .moya-portrait-main {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 25px;
+    width: 100%;
+  }
+
+  .moya-portrait-art .moya-image-wrap {
+    height: 54vh;
+    min-height: 400px;
+    max-height: 610px;
+  }
+
+  .moya-portrait-main .moya-wall-label {
+    max-width: none;
+  }
+
+  .moya-portrait-copy {
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 28px;
+  }
+
+  .moya-portrait-copy .moya-reflection {
+    margin-top: 32px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(199, 164, 106, 0.28);
+  }
+
+  .moya-closing {
+    padding: 90px 9vw;
+  }
+
+  .moya-closing h2 {
+    font-size: clamp(3.3rem, 14vw, 5.5rem);
+  }
+
+  .moya-closing p:not(.moya-eyebrow) {
+    font-size: 0.82rem;
+    line-height: 1.75;
+  }
+
+  .moya-footer {
+    right: auto;
+    left: 6%;
+    bottom: 20px;
+  }
+
+  .moya-footer a {
+    font-size: 0.52rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .moya-opening {
+    padding-left: 8vw;
+    padding-right: 8vw;
+  }
+
+  .moya-landscape-panel,
+  .moya-portrait-panel {
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
+
+  .moya-landscape-art .moya-image-wrap {
+    height: 36vh;
+    min-height: 230px;
+  }
+
+  .moya-portrait-art .moya-image-wrap {
+    height: 51vh;
+    min-height: 350px;
+  }
+
+  .moya-work-label {
+    margin-bottom: 13px;
+  }
+
+  .moya-opening-text {
+    font-size: 0.78rem;
+  }
+}
+
+.artist-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  width: 100%;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  box-sizing: border-box;
+}
+
+.artist-brand {
+  color: #f5f0e8;
+  text-decoration: none;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.2rem;
+  transition: opacity 0.3s ease;
+}
+
+.artist-brand:hover {
+  opacity: 0.6;
+}
+
+/* Selected Works — immersive navigation */
+
+.selected-works-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  width: 100%;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  box-sizing: border-box;
+}
+
+.selected-works-brand {
+  color: #f3f0eb;
+  text-decoration: none;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.2rem;
+  transition: opacity 0.3s ease;
+}
+
+.selected-works-brand:hover {
+  opacity: 0.6;
 }

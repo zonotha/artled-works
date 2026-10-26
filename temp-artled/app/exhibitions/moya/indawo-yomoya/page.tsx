@@ -1,6 +1,6 @@
 import Description from "@/components/Description";
 import { artworks } from "@/data/artworks";
-import ArtworkHero from "@/components/EntranceWall.tsx";
+import ArtworkHero from "@/components/EntranceWall";
 import Reflection from "@/components/Reflection";
 import WallLabel from "@/components/WallLabel";
 import NextRoom from "@/components/NextRoom";
@@ -31,13 +31,12 @@ export default function IndawoYomoya() {
          background={artwork.backgrounds.label}
        />      
  
-       <Description background={artwork.backgrounds.description}>
+      <Description>
          {artwork.description}
        </Description>
        
        <Reflection
          title="Reflection"
-         background={artwork.backgrounds.reflection}
        >
         <p>
           Every journey eventually returns

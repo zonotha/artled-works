@@ -1,13 +1,11 @@
 interface ReflectionProps {
   title: string;
   children: React.ReactNode;
-  background: string;
 }
 
 export default function Reflection({
   title,
   children,
-  background,
 }: ReflectionProps) {
   return (
     <section

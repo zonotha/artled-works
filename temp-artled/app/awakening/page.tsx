@@ -5,17 +5,10 @@ export default function AwakeningPage() {
   return (
     <main className="awakening-page">
 
-      <header className="site-nav">
-        <Link href="/" className="brand">
+      <header className="awakening-nav">
+        <Link href="/" className="awakening-brand">
           ARTLED WORKS
         </Link>
-
-        <nav>
-          <Link href="/works">WORKS</Link>
-          <Link href="/process">PROCESS</Link>
-          <Link href="/about">ABOUT</Link>
-          <Link href="/contact">CONTACT</Link>
-        </nav>
       </header>
 
       <section className="awakening-hero">
@@ -115,7 +108,7 @@ export default function AwakeningPage() {
 
               <p>
                 It can happen in many areas of a
-                person's life — in the way we see
+                person&apos;s life — in the way we see
                 ourselves, the choices we make,
                 the relationships we hold, or the
                 direction we begin to take.
@@ -195,12 +188,12 @@ export default function AwakeningPage() {
               <h2>What we carry</h2>
 
               <p>
-                We don't leave everything behind
+                We don&apos;t leave everything behind
                 when we awaken.
               </p>
 
               <p>
-                We carry parts of where we've been
+                We carry parts of where we&apos;ve been
                 with us — experiences, lessons,
                 memories and the things that shaped
                 who we became.

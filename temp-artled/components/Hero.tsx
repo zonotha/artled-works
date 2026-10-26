@@ -1,12 +1,7 @@
 import Image from "next/image";
-import Navbar from "./Navbar";
-import Button from "./Button";
 
 export default function Hero() {
   return (
-    <>
-      <Navbar />
-
 <section className="hero">
   <div className="hero-layout">
 
@@ -25,9 +20,6 @@ export default function Hero() {
             to look beyond the visible.
            </p>
 
-           <Button href="/exhibitions">
-             Enter Gallery <span>→</span>
-           </Button>
           </div>
 
         <div className="hero-artwork">
@@ -42,6 +34,5 @@ export default function Hero() {
 
   </div>
 </section>
-    </>
   );
 }
